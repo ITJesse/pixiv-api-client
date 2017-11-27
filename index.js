@@ -86,6 +86,10 @@ class PixivApi {
   authInfo() {
     return this.auth;
   }
+  
+  setAuthInfo(response) {
+    this.auth = response;
+  }
 
   refreshAccessToken(refreshToken) {
     if ((!this.auth || !this.auth.refresh_token) && !refreshToken) {
